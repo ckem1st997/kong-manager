@@ -38,7 +38,9 @@ export const config = {
   },
 
   get ADMIN_API_URL () {
-    const ADMIN_API_URL = getConfig<string | null>('ADMIN_API_URL', null)
+   // const ADMIN_API_URL = getConfig<string | null>('ADMIN_API_URL', null)
+ //  const ADMIN_API_URL = http://kong-admin.hacom.local/
+    const ADMIN_API_URL = "kong-api.dev-env.svc.cluster.local:8001"
     if (ADMIN_API_URL) {
       return /^(https?:)?\/\//.test(ADMIN_API_URL)
         ? ADMIN_API_URL
